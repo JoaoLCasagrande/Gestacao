@@ -1,0 +1,7 @@
+{
+  "name": "Gestacao",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
