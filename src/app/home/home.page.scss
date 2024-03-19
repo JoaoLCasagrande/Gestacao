@@ -31,3 +31,7 @@ ion-title{
   color: #ffffff;
   font-family: monospace;
 }
+
+ion-content{
+  --background: url("../../assets/imgs/Capa.jpeg")no-repeat fixed center;
+}
