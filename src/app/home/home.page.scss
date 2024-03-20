@@ -33,6 +33,18 @@ ion-title{
   font-size: 22px;
 }
 
+
 ion-content{
-  --background: url("../../assets/imgs/Capa.jpeg") no-repeat fixed center;
+  --background: url("https://img.freepik.com/fotos-gratis/duas-maos-em-forma-de-coracao-no-estomago-de-uma-mae-gravida_181624-6985.jpg?t=st=1710894571~exp=1710898171~hmac=846ebf25e15a67cc92e13cc657ea9a8ec0ac2e3993673f8cc3ce6ef35fa19643&w=360") fixed center;
 }
+
+#capaLivro{
+  height: 20px;
+  width: 50px;
+}
+
+#cardLivro{
+  margin-left: 25%;
+  width: 250px;
+}
+
