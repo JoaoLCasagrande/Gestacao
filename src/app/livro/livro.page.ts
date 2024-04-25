@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LivroPage implements OnInit {
 
+
   constructor() { }
 
   ngOnInit() {

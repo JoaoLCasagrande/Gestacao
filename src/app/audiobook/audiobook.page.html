@@ -1,9 +1,37 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>audiobook</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button color="rosa-forte" defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Audiobook</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" color="rosa-forte-escuro">
+
+  <ion-card>
+
+    <ion-card-content>
+      <p routerLink="/capituloum" id="text">Ouvir Capítulo 1</p>
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card>
+
+    <ion-card-content>
+      <p routerLink="/capituloum" id="text">Ouvir Capítulo 2</p>
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card>
+
+    <ion-card-content>
+      <p routerLink="/capituloum" id="text">Ouvir Capítulo 3</p>
+    </ion-card-content>
+
+  </ion-card>
+
 
 </ion-content>

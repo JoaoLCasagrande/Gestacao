@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: AudiobookPage
+  },
+  {
+    path: 'capitulo-um',
+    loadChildren: () => import('./capitulo-um/capitulo-um.module').then( m => m.CapituloUmPageModule)
   }
 ];
 
