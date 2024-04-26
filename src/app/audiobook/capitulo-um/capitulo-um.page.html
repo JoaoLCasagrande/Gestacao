@@ -1,7 +1,10 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button color="rosa-forte" defaultHref="/Audiobook"></ion-back-button>
+      <ion-back-button
+        color="rosa-forte"
+        defaultHref="/Audiobook"
+      ></ion-back-button>
     </ion-buttons>
     <ion-title>capitulo-um</ion-title>
   </ion-toolbar>
@@ -9,17 +12,42 @@
 
 <ion-content [fullscreen]="true">
 
-  <ion-card>
+  <ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>Primeiro Capítulo</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <p>
+          Capítulo 1:<br/>
+        </p>
+          <audio id="audioPlayer" controls>
+            <source src="/assets/audios/Capitulo_1.mp3" type="audio/mp3" />
 
-    <ion-card-content>
+            Your browser does not support the audio element.
+          </audio><br/>
 
-      <audio controls>
-        <source src="/src/assets/audios/Visão Geral App Gestação.mp3" type="audio/mp3">
-        Seu navegador não suporta áudio HTML.
-      </audio>
+        <p>
+          Conclusão do Capítulo 1:<br/>
+        </p>
+          <audio id="audioPlayer" controls>
+            <source src="/assets/audios/Conclusão_Capitulo_1.mp3" type="audio/mp3" />
 
-    </ion-card-content>
-
-  </ion-card>
-
+            Your browser does not support the audio element.
+          </audio>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header" color="light">
+        <ion-label>Second Accordion</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">Second Content</div>
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header" color="light">
+        <ion-label>Third Accordion</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">Third Content</div>
+    </ion-accordion>
+  </ion-accordion-group>
 </ion-content>
