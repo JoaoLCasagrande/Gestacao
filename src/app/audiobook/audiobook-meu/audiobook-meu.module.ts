@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CapituloUmPageRoutingModule } from './capitulo-um-routing.module';
+import { AudiobookMeuPageRoutingModule } from './audiobook-meu-routing.module';
 
-import { CapituloUmPage } from './capitulo-um.page';
+import { AudiobookMeuPage } from './audiobook-meu.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CapituloUmPageRoutingModule
+    AudiobookMeuPageRoutingModule
   ],
-  declarations: [CapituloUmPage]
+  declarations: [AudiobookMeuPage]
 })
-export class CapituloUmPageModule {}
+export class AudiobookMeuPageModule {}

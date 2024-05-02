@@ -20,8 +20,8 @@ const routes: Routes = [
     loadChildren: () => import('./audiobook/audiobook.module').then( m => m.AudiobookPageModule)
   },
   {
-    path:'capituloum',
-    loadChildren: () => import('./audiobook/capitulo-um/capitulo-um.module').then( m => m.CapituloUmPageModule)
+    path:'audiobook-meu',
+    loadChildren: () => import('./audiobook/audiobook-meu/audiobook-meu-routing.module').then( m => m.AudiobookMeuPageRoutingModule)
   },
 ];
 

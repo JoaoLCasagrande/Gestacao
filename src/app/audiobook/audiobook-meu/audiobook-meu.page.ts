@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-capitulo-um',
-  templateUrl: './capitulo-um.page.html',
-  styleUrls: ['./capitulo-um.page.scss'],
+  selector: 'app-audiobook-meu',
+  templateUrl: './audiobook-meu.page.html',
+  styleUrls: ['./audiobook-meu.page.scss'],
 })
-export class CapituloUmPage implements OnInit {
+export class AudiobookMeuPage implements OnInit {
 
   playAudio() {
     const audioPlayer = document.getElementById('audioPlayer') as HTMLAudioElement;
