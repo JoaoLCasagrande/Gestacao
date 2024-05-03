@@ -9,29 +9,21 @@
 
 <ion-content [fullscreen]="true" color="rosa-forte-escuro">
 
-  <ion-card>
-
-    <ion-card-content>
-      <p routerLink="/audiobook-meu" id="text">Ouvir Capítulo 1</p>
-    </ion-card-content>
-
-  </ion-card>
-
-  <ion-card>
-
-    <ion-card-content>
-      <p routerLink="/audiobook-meu" id="text">Ouvir Capítulo 2</p>
-    </ion-card-content>
-
-  </ion-card>
-
-  <ion-card>
-
-    <ion-card-content>
-      <p routerLink="/audiobook-meu" id="text">Ouvir Capítulo 3</p>
-    </ion-card-content>
-
-  </ion-card>
-
+  <ion-list color="rosa-fraco">
+    <ion-item routerLink="/audiobook-meu" lines="full" color="rosa-fraco">
+      <img
+        slot="start"
+        class="ft-livro"
+        src="../../assets/imgs/Capa.jpeg"
+      />
+      <ion-label class="ion-text-wrap">
+        <div class="desc">
+          <h3>Gestação, Vida e Saúde</h3>
+          <p class="autor">25/01/2013 (BR)</p>
+        </div>
+      </ion-label>
+    </ion-item>
+    <!-- Gestação, Vida e Saúde -->
+  </ion-list>
 
 </ion-content>
