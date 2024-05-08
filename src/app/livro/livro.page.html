@@ -3,10 +3,27 @@
     <ion-buttons slot="start">
       <ion-back-button color="rosa-forte" defaultHref="/home"></ion-back-button>
     </ion-buttons>
-    <ion-title>Livro</ion-title>
+    <ion-title>Livros</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" color="rosa-forte-escuro">
+
+  <ion-list>
+    <ion-item routerLink="/audiobook-meu" lines="full" color="rosa-fraco">
+      <img
+        slot="start"
+        class="ft-livro"
+        src="../../assets/imgs/Capa.jpeg"
+      />
+      <ion-label class="ion-text-wrap">
+        <div class="desc">
+          <h3>Gestação, Vida e Saúde</h3>
+          <p class="autor">25/01/2013 (BR)</p>
+        </div>
+      </ion-label>
+    </ion-item>
+    <!-- Gestação, Vida e Saúde -->
+  </ion-list>
 
 </ion-content>

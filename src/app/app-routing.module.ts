@@ -23,6 +23,10 @@ const routes: Routes = [
     path:'audiobook-meu',
     loadChildren: () => import('./audiobook/audiobook-meu/audiobook-meu-routing.module').then( m => m.AudiobookMeuPageRoutingModule)
   },
+  {
+    path: 'audio-livro',
+    loadChildren: () => import('./audio-livro/audio-livro.module').then( m => m.AudioLivroPageModule)
+  },
 ];
 
 @NgModule({
