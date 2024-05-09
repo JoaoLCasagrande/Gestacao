@@ -1,13 +1,25 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>audio-livro</ion-title>
+  <ion-toolbar color="rosa-forte">
+    <ion-buttons slot="start">
+      <ion-back-button color="rosa-fraco" defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Livros</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">audio-livro</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" style="--background: linear-gradient(#ff89c4, #ffe0f3);">
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Para começar...</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p id="text">Por onde deseja seguir?</p>
+    </ion-card-content>
+
+    <ion-button routerLink="/livro" fill="clear">Desejo ler os Livros</ion-button>
+    <ion-button routerLink="/audiobook" fill="clear">Desejo ouvir os audiobooks</ion-button>
+  </ion-card>
+
 </ion-content>

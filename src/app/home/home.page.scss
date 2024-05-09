@@ -1,31 +1,3 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}
-
 ion-title{
   text-align: center;
   color: #ffffff;
@@ -33,23 +5,32 @@ ion-title{
   font-size: 22px;
 }
 
-
-/*#capaLivro{
-  height: 20px;
-  width: 50px;
-}
-
-#cardLivro{
-  margin-left: 25%;
-  width: 250px;
-}*/
-
 ion-card-title{
   font-size: 25px;
   color: #1c249b;
+  text-align: center;
 }
 
 #text{
   color: #000;
-  font-size: 15px;
+  font-size: 20px;
+  text-align: justify;
+  text-indent: 20px;
 }
+
+#botoes{
+  width: 100%;
+  text-align: center;
+}
+
+p{
+  margin: 0;
+  color: #000;
+  font-size: 20px;
+}
+
+ion-button{
+  border: #000 4px solid;
+  margin: 0px 30px 10px 30px;
+}
+

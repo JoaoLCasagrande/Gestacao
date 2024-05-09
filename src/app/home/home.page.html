@@ -1,25 +1,29 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="rosa-forte">
-    <ion-title>
-      Vida de Gestante
-    </ion-title>
+    <ion-title> Vida de Gestante </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" color="rosa-forte-escuro">
+<ion-content [fullscreen]="true" style="--background: linear-gradient(#ff89c4, #ffe0f3);">
 
-  <ion-card id="cardLivro">
-    <img id="capaLivro" alt="Capa do Livro Gestação, Vida e Saúde" src="../../assets/imgs/Capa.jpeg" />
+  <ion-card>
+    <img alt="Capa do Aplicativo" src="../../assets/imgs/Capa.jpg" />
     <ion-card-header>
       <ion-card-title>Gestação, Vida e Saúde</ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
-      <p id="text">Aprenda sobre o processo de gestação e a importância da saúde durante a vida.</p>
+      <p id="text">
+        Aprenda sobre o processo de gestação e a importância da saúde durante a
+        vida.
+      </p>
     </ion-card-content>
 
-    <ion-button routerLink="/livro" fill="clear">Ir para os livros</ion-button>
-    <ion-button routerLink="/audiobook" fill="clear">Ir para os audiobooks</ion-button>
+    <div id="botoes">
+      <ion-button routerLink="/audio-livro" expand="full" color="rosa"><p>Livros/Audiobooks</p></ion-button><br>
+      <ion-button routerLink="/quiz" expand="full" color="rosa"><p>Quiz</p></ion-button><br>
+      <ion-button routerLink="/sobre" expand="full" color="rosa"><p>Sobre</p></ion-button><br>
+    </div>
   </ion-card>
 
 </ion-content>

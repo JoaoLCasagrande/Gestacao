@@ -27,6 +27,14 @@ const routes: Routes = [
     path: 'audio-livro',
     loadChildren: () => import('./audio-livro/audio-livro.module').then( m => m.AudioLivroPageModule)
   },
+  {
+    path: 'sobre',
+    loadChildren: () => import('./sobre/sobre.module').then( m => m.SobrePageModule)
+  },
+  {
+    path: 'quiz',
+    loadChildren: () => import('./quiz/quiz.module').then( m => m.QuizPageModule)
+  },
 ];
 
 @NgModule({
