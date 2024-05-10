@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'quiz',
     loadChildren: () => import('./quiz/quiz.module').then( m => m.QuizPageModule)
   },
+  {
+    path: 'quiz-livro-meu',
+    loadChildren: () => import('./quiz/quiz-livro-meu/quiz-livro-meu.module').then( m => m.QuizLivroMeuPageModule)
+  },
 ];
 
 @NgModule({
