@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-quiz-livro-meu',
@@ -9,14 +10,34 @@ export class QuizLivroMeuPage implements OnInit {
 
   questions = [
     {
-      question: 'What is the capital of France?',
-      options: ['Paris', 'London', 'Berlin'],
-      answer: 'Paris'
+      question: 'Quais são as complicações que podem ocorrer durante a gestação?',
+      options: ['Conforto e bem-estar','Pré-eclâmpsia e diabetes gestacional','Fertilidade aumentada'],
+      answer: 'Pré-eclâmpsia e diabetes gestacional'
     },
     {
-      question: 'What is the largest mammal?',
-      options: ['Elephant', 'Whale', 'Giraffe'],
-      answer: 'Whale'
+      question: 'Qual dos exercícios abaixo é recomendado para gestantes?',
+      options: ['Levantamento de peso', 'Natação','Corrida de longa distância'],
+      answer: 'Natação'
+    },
+    {
+      question: 'Qual a importância de cuidar da saúde durante a gestação?',
+      options: ['Não tem importância','Garantir o bem-estar da mãe e do bebê','Aumentar o risco de complicações'],
+      answer: 'Garantir o bem-estar da mãe e do bebê'
+    },
+    {
+      question: 'Qual é o objetivo da alimentação saudável durante a gestação?',
+      options: ['Ganhar peso rapidamente', 'Garantir os nutrientes necessários para o bebê', 'Prevenir o parto prematuro'],
+      answer: 'Garantir os nutrientes necessários para o bebê'
+    },
+    {
+      question: 'Quais são os principais cuidados pré-natais?',
+      options: ['Fazer exercícios intensos','Fazer exames periódicos','Ingerir alimentos não saudáveis'],
+      answer: 'Fazer exames periódicos'
+    },
+    {
+      question: 'Qual dos alimentos abaixo é considerado saudável durante a gestação?',
+      options: ['Batata frita', 'Hamburguer', 'Frutas e verduras'],
+      answer: 'Frutas e verduras'
     }
   ];
 
@@ -26,7 +47,7 @@ export class QuizLivroMeuPage implements OnInit {
   correctAnswers = 0;
 
 
-  constructor() {
+  constructor(private navCtrl: NavController) {
     this.selectedAnswer = null;
   }
 
@@ -60,5 +81,9 @@ export class QuizLivroMeuPage implements OnInit {
     const totalQuestions = this.questions.length;
     const resultMessage = `Você acertou ${this.correctAnswers} / ${totalQuestions}`;
     alert(resultMessage);
+
+    // Redirecionar para a página de exemplo
+    this.navCtrl.navigateForward('fim-quiz');
   }
+
 }

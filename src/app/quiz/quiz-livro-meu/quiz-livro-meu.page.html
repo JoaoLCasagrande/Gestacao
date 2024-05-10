@@ -1,13 +1,13 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="rosa-fraco">
     <ion-buttons slot="start">
       <ion-back-button color="rosa-forte" defaultHref="/quiz"></ion-back-button>
     </ion-buttons>
-    <ion-title>Livros</ion-title>
+    <ion-title color="dark">Quiz</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
+<ion-content class="ion-padding" style="--background: linear-gradient(#ff89c4, #ffe0f3);">
   <h2 class="question">{{ currentQuestion.question }}</h2>
   <ion-radio-group (ionChange)="selectAnswer($event.detail.value)">
     <ion-item *ngFor="let option of currentQuestion.options">
@@ -15,5 +15,5 @@
       <ion-radio slot="start" [value]="option"></ion-radio>
     </ion-item>
   </ion-radio-group>
-  <ion-button expand="block" (click)="checkAnswer()">Submit</ion-button>
+  <ion-button expand="block" (click)="checkAnswer()">Confirma</ion-button>
 </ion-content>

@@ -11,6 +11,10 @@ const routes: Routes = [
   {
     path: 'quiz-livro-meu',
     loadChildren: () => import('./quiz-livro-meu/quiz-livro-meu.module').then( m => m.QuizLivroMeuPageModule)
+  },
+  {
+    path: 'fim-quiz',
+    loadChildren: () => import('./fim-quiz/fim-quiz.module').then( m => m.FimQuizPageModule)
   }
 ];
 
