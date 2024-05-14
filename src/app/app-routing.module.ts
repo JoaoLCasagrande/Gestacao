@@ -40,6 +40,10 @@ const routes: Routes = [
     loadChildren: () => import('./quiz/quiz-livro-meu/quiz-livro-meu.module').then( m => m.QuizLivroMeuPageModule)
   },
   {
+    path: 'quiz-nutricao',
+    loadChildren: () => import('./quiz/quiz-nutricao/quiz-nutricao.module').then( m => m.QuizNutricaoPageModule)
+  },
+  {
     path: 'fim-quiz',
     loadChildren: () => import('./quiz/fim-quiz/fim-quiz-routing.module').then( m => m.FimQuizPageRoutingModule)
   },

@@ -7,10 +7,13 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">quiz-nutricao</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding" style="--background: linear-gradient(#ff89c4, #ffe0f3);">
+  <h2 class="question">{{ currentQuestion.question }}</h2>
+  <ion-radio-group (ionChange)="selectAnswer($event.detail.value)">
+    <ion-item *ngFor="let option of currentQuestion.options">
+      <ion-label>{{ option }}</ion-label>
+      <ion-radio slot="start" [value]="option"></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+  <ion-button expand="block" (click)="checkAnswer()">Confirma</ion-button>
 </ion-content>
