@@ -47,6 +47,10 @@ const routes: Routes = [
     path: 'fim-quiz',
     loadChildren: () => import('./quiz/fim-quiz/fim-quiz-routing.module').then( m => m.FimQuizPageRoutingModule)
   },
+  {
+    path: 'projeto-revista',
+    loadChildren: () => import('./livro/projeto-revista/projeto-revista-routing.module').then( m => m.ProjetoRevistaPageRoutingModule)
+  },
 ];
 
 @NgModule({
