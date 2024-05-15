@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: LivroPage
+  },
+  {
+    path: 'projeto-revista',
+    loadChildren: () => import('./projeto-revista/projeto-revista.module').then( m => m.ProjetoRevistaPageModule)
   }
 ];
 
