@@ -48,8 +48,8 @@ const routes: Routes = [
     loadChildren: () => import('./quiz/fim-quiz/fim-quiz-routing.module').then( m => m.FimQuizPageRoutingModule)
   },
   {
-    path: 'projeto-revista',
-    loadChildren: () => import('./livro/projeto-revista/projeto-revista-routing.module').then( m => m.ProjetoRevistaPageRoutingModule)
+    path: 'revista',
+    loadChildren: () => import('./livro/revista/revista.module').then( m => m.RevistaPageModule)
   },
 ];
 

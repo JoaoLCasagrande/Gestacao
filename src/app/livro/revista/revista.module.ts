@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ProjetoRevistaPageRoutingModule } from './projeto-revista-routing.module';
+import { RevistaPageRoutingModule } from './revista-routing.module';
 
-import { ProjetoRevistaPage } from './projeto-revista.page';
+import { RevistaPage } from './revista.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ProjetoRevistaPageRoutingModule
+    RevistaPageRoutingModule
   ],
-  declarations: [ProjetoRevistaPage]
+  declarations: [RevistaPage]
 })
-export class ProjetoRevistaPageModule {}
+export class RevistaPageModule {}

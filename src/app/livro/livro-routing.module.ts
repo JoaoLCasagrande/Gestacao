@@ -9,8 +9,8 @@ const routes: Routes = [
     component: LivroPage
   },
   {
-    path: 'projeto-revista',
-    loadChildren: () => import('./projeto-revista/projeto-revista.module').then( m => m.ProjetoRevistaPageModule)
+    path: 'revista',
+    loadChildren: () => import('./revista/revista.module').then( m => m.RevistaPageModule)
   }
 ];
 

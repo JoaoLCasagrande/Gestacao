@@ -1,19 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Filesystem, Directory } from '@capacitor/filesystem';
 import { Platform, AlertController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-projeto-revista',
-  templateUrl: './projeto-revista.page.html',
-  styleUrls: ['./projeto-revista.page.scss'],
+  selector: 'app-revista',
+  templateUrl: './revista.page.html',
+  styleUrls: ['./revista.page.scss'],
 })
-export class ProjetoRevistaPage {
+export class RevistaPage implements OnInit {
 
   constructor(
     private http: HttpClient,
     private platform: Platform
   ) {}
+
+  ngOnInit() {
+
+  }
 
   async downloadPDF() {
     const permission = await this.requestStoragePermission();
