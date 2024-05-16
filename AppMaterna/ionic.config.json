@@ -1,0 +1,7 @@
+{
+  "name": "AppMaterna",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

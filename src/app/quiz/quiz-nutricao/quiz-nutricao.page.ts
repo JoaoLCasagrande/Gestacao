@@ -1,3 +1,4 @@
+/* eslint-disable @angular-eslint/no-empty-lifecycle-method */
 import { Component, OnInit } from '@angular/core';
 import { NavController, AlertController } from '@ionic/angular';
 
@@ -10,34 +11,14 @@ export class QuizNutricaoPage implements OnInit {
 
   questions = [
     {
-      question: 'Quais são as complicações que podem ocorrer durante a gestação?',
-      options: ['Conforto e bem-estar','Pré-eclâmpsia e diabetes gestacional','Fertilidade aumentada'],
-      answer: 'Pré-eclâmpsia e diabetes gestacional'
+      question: 'Gestante tem que comer por dois?​',
+      options: ['Verdadeiro','Falso'],
+      answer: 'Falso'
     },
     {
-      question: 'Qual dos exercícios abaixo é recomendado para gestantes?',
-      options: ['Levantamento de peso', 'Natação','Corrida de longa distância'],
-      answer: 'Natação'
-    },
-    {
-      question: 'Qual a importância de cuidar da saúde durante a gestação?',
-      options: ['Não tem importância','Garantir o bem-estar da mãe e do bebê','Aumentar o risco de complicações'],
-      answer: 'Garantir o bem-estar da mãe e do bebê'
-    },
-    {
-      question: 'Qual é o objetivo da alimentação saudável durante a gestação?',
-      options: ['Ganhar peso rapidamente', 'Garantir os nutrientes necessários para o bebê', 'Prevenir o parto prematuro'],
-      answer: 'Garantir os nutrientes necessários para o bebê'
-    },
-    {
-      question: 'Quais são os principais cuidados pré-natais?',
-      options: ['Fazer exercícios intensos','Fazer exames periódicos','Ingerir alimentos não saudáveis'],
-      answer: 'Fazer exames periódicos'
-    },
-    {
-      question: 'Qual dos alimentos abaixo é considerado saudável durante a gestação?',
-      options: ['Batata frita', 'Hamburguer', 'Frutas e verduras'],
-      answer: 'Frutas e verduras'
+      question: 'Gestantes devem evitar alguns adoçantes?​',
+      options: ['Verdadeiro','Falso'],
+      answer: 'Verdadeiro'
     }
   ];
 
@@ -59,20 +40,40 @@ export class QuizNutricaoPage implements OnInit {
 
   async checkAnswer() {
     let alertMessage;
-    if (this.selectedAnswer === this.currentQuestion.answer) {
+    const currentQuestion = this.questions[this.currentQuestionIndex];
+
+    if (this.selectedAnswer === currentQuestion.answer) {
       this.correctAnswers++;
       alertMessage = 'Resposta Correta!';
     } else {
-      alertMessage = 'Resposta Errada! A resposta correta é: ' + this.currentQuestion.answer;
+      alertMessage = 'Resposta Errada! A resposta correta é: ' + currentQuestion.answer;
+    }
+
+    let customMessage = '';
+
+    // Aqui você pode definir mensagens personalizadas para cada pergunta
+    switch(this.currentQuestionIndex) {
+      case 0:
+        customMessage = 'Durante a gestação, o aumento das necessidades de vitaminas e minerais é maior do que as energéticas. Por isso, comer em dobro não é indicado e, inclusive, pode resultar em complicações se houver um ganho de peso muito acima do recomendado.​';
+        break;
+      case 1:
+        customMessage = 'A sacarina e o ciclamato devem ser evitados durante a gestação devido a limitação de informações sobre o potencial carcinogênico, o uso na gestação e os efeitos sobre o feto. Assim, caso necessário fazer o uso, é preferível recorrer a outros tipos de adoçantes, como o aspartame ou estévia.​';
+        break;
+      // Adicione mais cases conforme necessário para mais perguntas
+      default:
+        customMessage = 'Mensagem padrão para perguntas adicionais';
     }
 
     const alert = await this.alertController.create({
       header: alertMessage,
-      message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      message: customMessage,
       buttons: ['OK']
     });
 
     await alert.present();
+
+    // Limpa a seleção antes de ir para a próxima pergunta
+  this.selectedAnswer = null;
 
     // Próxima Questão
     this.currentQuestionIndex++;
